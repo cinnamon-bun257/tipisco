@@ -1,6 +1,5 @@
 section.header-section {
   text-align: center;
-  width: 99vw;
   height: 10vw;
   display: flex;
   flex-direction: row;
@@ -125,4 +124,8 @@ span.close:hover {
 
 div.modal-message {
   font-size: 1vw;
+}
+
+body {
+  margin: 1% 1%;
 }
