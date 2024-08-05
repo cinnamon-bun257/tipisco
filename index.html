@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
   <link rel="stylesheet" href="styles.css" />
+  <php? include('signup.php'); ?>
   <head>
     <title>TipiSCo</title>
   </head>
@@ -14,9 +15,55 @@
       </div>
       <div class="header-user" id="header-user">
         <button class="login-button" id="login-button">Login</button>
+        <div id="login-modal" class="modal-bg">
+          <div class="modal">
+            <span class="close" id="close-login">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="login-form" method="post" action="login.php">
+              <label for="email/username">Email:</label>
+              <input
+                type="text"
+                id="email/username"
+                name="email/username"
+                required
+              />
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required />
+              <button type="submit">Login</button>
+            </form>
+            <div class="modal-message" id="login-message"></div>
+          </div>
+        </div>
+
         <button class="signup-button" id="signup-button">Sign Up</button>
-        <!-- <button class="user-button" id="user-button">User</button> -->
+        <div id="signup-modal" class="modal-bg">
+          <div class="modal">
+            <span class="close" id="close-signup">&times;</span>
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+              <label for="firstname">Vorname:</label>
+              <input type="text" id="firstname" name="firstname" required />
+              <label for="name">Nachname:</label>
+              <input type="text" id="name" name="name" required />
+              <label for="newusername">Username:</label>
+              <input type="text" id="newusername" name="newusername" required />
+              <label for="newemail">Email:</label>
+              <input type="email" id="newemail" name="newemail" required />
+              <label for="newpassword">Password:</label>
+              <input
+                type="password"
+                id="newpassword"
+                name="newpassword"
+                required
+              />
+              <button type="submit">Register</button>
+            </form>
+            <div class="modal-message" id="signup-message"></div>
+          </div>
+        </div>
+        <img src="usericon.png" class="user-button" id="user-button" />
       </div>
     </section>
   </body>
+  <script src="script.js"></script>
 </html>

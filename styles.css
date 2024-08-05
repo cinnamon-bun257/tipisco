@@ -42,6 +42,11 @@ div.header-user {
   display: flex;
   flex-direction: column;
 }
+img.user-button {
+  display: none; /*hidden by default*/
+  margin: 25% 25%;
+  cursor: pointer;
+}
 
 button.login-button,
 button.signup-button {
@@ -69,4 +74,47 @@ button.login-button:hover,
 button.signup-button:hover {
   transform: scale(1.05);
   box-shadow: 0 0 15px 7px rgba(0, 0, 0, 0.3);
+}
+
+div.modal-bg {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+div.modal {
+  background-color: #fefefe;
+  margin: 10% auto; /* 15% from the top and centered */
+  padding: 2vw;
+  border: none;
+  width: 70%; /* Could be more or less, depending on screen size */
+  height: 45%;
+  border-radius: 2vw;
+}
+
+span.close {
+  color: #aaa;
+  cursor: pointer; /*doesnt work */
+  float: right;
+  font-size: 2vw;
+  font-weight: bold;
+  text-shadow: 0 0 7px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+span.close:hover {
+  color: black;
+  transform: scale(1.05);
+  text-shadow: 0 0 15px 7px rgba(0, 0, 0, 0.3);
+}
+
+div.modal-message {
+  font-size: 1vw;
 }
