@@ -82,12 +82,12 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((data) => {
         if (data.success) {
           loginForm.style.display = "none";
-          loginMessage.innerHTML = "Signup successful!";
+          loginMessage.innerHTML = "Login successful!";
           loginButton.style.display = "none";
           signupButton.style.display = "none";
           userButton.style.display = "block";
         } else {
-          loginMessage.innerHTML = "Signup failed: " + data.message;
+          loginMessage.innerHTML = "Login failed: " + data.message;
         }
       })
       .catch((error) => {
