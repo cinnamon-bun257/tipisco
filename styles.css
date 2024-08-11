@@ -50,10 +50,9 @@ img.user-button {
   transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-img.user-button:hover {
+/* img.user-button:hover {
   transform: scale(1.05);
-  text-shadow: 0 0 15px 7px rgba(0, 0, 0, 0.3);
-}
+} */
 
 button.login-button,
 button.signup-button {
