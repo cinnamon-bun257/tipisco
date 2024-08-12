@@ -7,7 +7,6 @@ body {
 
 section.header-section {
   text-align: center;
-  width: 99vw;
   height: 10vw;
   display: flex;
   flex-direction: row;
