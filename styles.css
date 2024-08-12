@@ -6,6 +6,7 @@ body {
 
 section.header-section {
   text-align: center;
+  width: 99vw;
   height: 10vw;
   display: flex;
   flex-direction: row;
@@ -65,10 +66,11 @@ button.login-button,
 button.signup-button {
   margin-left: 15%;
   margin-right: 15%;
-  height: 30%;
+  height: 3vw;
   border-radius: 1vw;
   font-size: 1.2vw;
   outline: none;
+  border: none; /* Removes any border */
   cursor: pointer;
   box-shadow: 0 0 7px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -124,10 +126,55 @@ span.close {
 
 span.close:hover {
   color: black;
-  transform: scale(1.05);
-  text-shadow: 0 0 15px 7px rgba(0, 0, 0, 0.3);
+  transform: scale(1.04);
+  text-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.3);
 }
 
 div.modal-message {
   font-size: 1vw;
+}
+
+body {
+  margin: 1% 1%;
+}
+
+img.user-button {
+  display: none; /*hidden by default*/
+  margin: 25% 25%;
+  cursor: pointer;
+  text-shadow: 0 0 7px 4px rgba(0, 0, 0, 0.1);
+  transition: width 0.4s ease-in-out, height 0.4s ease-in-out, margin 0.4s ease-in-out;
+}
+
+button.user-button {
+  visibility: visible;
+  position: relative;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out, transform 0.15s ease-in-out;
+  cursor: pointer;
+  margin-bottom: 7.5%;
+  margin-left: 15%;
+  margin-right: 15%;
+  height: 1.75vw;
+  width: 70%;
+  font-size: 1vw;
+  outline: none;
+  border: none;
+  background-color: antiquewhite;
+  color: black;
+  border-radius: 0.5vw;
+  box-shadow: 0 0 7px 4px rgba(0, 0, 0, 0.1);
+}
+
+button.user-button:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.3);
+}
+
+button.hidden {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  height: 1px;
+  width: 1px;
 }
