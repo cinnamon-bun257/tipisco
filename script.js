@@ -38,7 +38,9 @@ var userButton = document.getElementById("user-button");
 // Get the buttons
 var loginButton = document.getElementById("login-button");
 var signupButton = document.getElementById("signup-button");
-function submitSignup() {
+
+signupForm.addEventListener("submit", function (event) {
+  event.preventDefault();
   var formData = new FormData(signupForm);
   fetch("signup.php", {
     method: "POST",
@@ -59,13 +61,14 @@ function submitSignup() {
     .catch((error) => {
       signupMessage.innerHTML = "An error occured: " + error.message;
     });
-}
+});
 
 //LoginForm
 var loginForm = document.getElementById("login-form");
 var loginMessage = document.getElementById("login-message");
 
-function submitLogin() {
+loginForm.addEventListener("submit", function (event) {
+  event.preventDefault();
   var formData = new FormData(loginForm);
 
   fetch("login.php", {
@@ -87,27 +90,38 @@ function submitLogin() {
     .catch((error) => {
       loginMessage.innerHTML = "An error occured: " + error.message;
     });
-}
+});
 
 function userHovered() {
   var userImg = document.getElementById("user-button");
-  if (userImg.style.display == "block") return;
-  // get elements
-  var logoutButton = document.getElementById("logout-button");
-  var accountButton = document.getElementById("account-button");
-  //shrink user button
-
-  userImg.style.margin = "10% 25%";
+  if (userImg.style.display == "block") {
+    // get elements
+    var logoutButton = document.getElementById("logout-button");
+    var accountButton = document.getElementById("switch-account");
+    //shrink user button
+    // userImg.classList.add("hovered");
+    userImg.style.width = "35%";
+    userImg.style.margin = "7.5% 32.5%";
+    logoutButton.classList.remove("hidden");
+    accountButton.classList.remove("hidden");
+  }
 }
 
 function userNotHovered() {
   var userImg = document.getElementById("user-button");
-  if (userImg.style.display == "block") return;
-  // get elements
-  var logoutButton = document.getElementById("logout-button");
-  var accountButton = document.getElementById("account-button");
-  //shrink user button
+  if (userImg.style.display == "block") {
+    // get elements
+    var logoutButton = document.getElementById("logout-button");
+    var accountButton = document.getElementById("switch-account");
+    //shrink user button
 
-  userImg.style.margin = "25% 25%";
-  logoutButton.style.display = "block";
+    userImg.style.width = "50%";
+    userImg.style.margin = "25% 25%";
+    logoutButton.classList.add("hidden");
+    accountButton.classList.add("hidden");
+  }
+}
+
+function logout() {
+  window.location.href = "logout.php";
 }

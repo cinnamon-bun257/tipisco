@@ -18,12 +18,12 @@
           <div class="modal">
             <span class="close" id="close-login" onclick="closeModal()">&times;</span>
             <h2>Login</h2>
-            <form id="login-form" method="post" action="login.php">
+            <form id="login-form">
               <label for="email/username">Email or Username:</label>
               <input type="text" id="email/username" name="email/username" required />
               <label for="password">Password:</label>
               <input type="password" id="password" name="password" required />
-              <button type="submit" onclick="submitLogin()">Login</button>
+              <button type="submit">Login</button>
             </form>
             <div class="modal-message" id="login-message"></div>
           </div>
@@ -32,7 +32,7 @@
         <button class="signup-button" id="signup-button" onclick="signupButtonPressed()">Sign Up</button>
         <div id="signup-modal" class="modal-bg">
           <div class="modal">
-            <span class="close" id="close-signup" onclick="closeModal()">&times;</span>
+            <span class="close" id="close-signup">&times;</span>
             <h2>Signup</h2>
             <form id="signup-form">
               <label class="firstname" for="firstname">Vorname:</label>
@@ -45,14 +45,16 @@
               <input type="email" id="newemail" name="newemail" required />
               <label class="newpassword" for="newpassword">Password:</label>
               <input type="password" id="newpassword" name="newpassword" required />
-              <button class="signup" type="submit" onclick="submitSignup()">Register</button>
+              <button class="signup" type="submit">Register</button>
             </form>
             <div class="modal-message" id="signup-message"></div>
           </div>
         </div>
         <img src="usericon.png" class="user-button" id="user-button" />
-        <button class="user-button" id="logout-button">Logout</button>
-        <button class="user-button" id="account-button"></button>
+        <button class="user-button switch-account hidden" class="switch-account" class="hidden" id="switch-account">
+          Accounts
+        </button>
+        <button class="user-button logout-button hidden" id="logout-button" onclick="logout()">Logout</button>
       </div>
     </section>
   </body>
