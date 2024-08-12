@@ -2,6 +2,7 @@ body {
   margin: 1% 1%;
   background-image: url(backgroundpic.jpg);
   background-size: cover;
+  box-sizing: content-box;
 }
 
 section.header-section {
@@ -175,6 +176,7 @@ button.hidden {
   visibility: hidden;
   position: absolute;
   opacity: 0;
+  margin-left: 0px;
   height: 1px;
   width: 1px;
 }
