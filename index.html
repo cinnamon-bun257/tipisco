@@ -57,6 +57,99 @@
         <button class="user-button logout-button hidden" id="logout-button" onclick="logout()">Logout</button>
       </div>
     </section>
+    <section class="body-section" id="body-section">
+      <div class="bet-standings" id="bet-standings">
+        <div
+          class="bet-standings-header body"
+          id="bet-standings-header"
+          onclick="bodyHeaderPressed('bet-standings', 'bet-form', 'bundesliga-standings')">
+          <h2 class="bet-standings-title" id="bet-standings-title">Tipp Tabelle</h2>
+        </div>
+        <div class="bet-standings-body body" id="bet-standings-body">
+          <table>
+            <tr>
+              <th>Platz</th>
+              <th>User</th>
+              <th>Gewonnene Matches</th>
+              <th>Gewinn</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Username</td>
+              <td>0</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Username</td>
+              <td>0</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Username</td>
+              <td>0</td>
+              <td>-</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="bet-form" id="bet-form">
+        <div
+          class="bet-form-header body"
+          id="bet-form-header"
+          onclick="bodyHeaderPressed('bet-form', 'bundesliga-standings', 'bet-standings')">
+          <h2 class="bet-form-title" id="bet-form-title">Tippen</h2>
+        </div>
+        <div class="bet-form-body body" id="bet-form-body">
+          <form id="bet-form-form">
+            <label for="bet-amount">Bet Amount:</label>
+            <input type="number" id="bet-amount" name="bet-amount" required />
+            <label for="bet-match">Bet Match:</label>
+            <input type="text" id="bet-match" name="bet-match" required />
+            <button type="submit">Bet</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="bundesliga-standings" id="bundesliga-standings">
+        <div
+          class="bundesliga-standings-header body"
+          id="bundesliga-standings-header"
+          onclick="bodyHeaderPressed('bundesliga-standings', 'bet-form', 'bet-standings')">
+          <h2 class="bundesliga-standings-title" id="bundesliga-standings-title">Bundesliga Tabelle</h1>
+        </div>
+        <div class="bundesliga-standings-body body" id="bundesliga-standings-body">
+          <table>
+            <tr>
+              <th>Platz</th>
+              <th>Club</th>
+              <th>Tordifferenz</th>
+              <th>Punkte</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Clubname</td>
+              <td>0</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Clubname</td>
+              <td>0</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Clubname</td>
+              <td>0</td>
+              <td>-</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
   </body>
   <script src="script.js"></script>
 </html>

@@ -125,3 +125,30 @@ function userNotHovered() {
 function logout() {
   window.location.href = "logout.php";
 }
+
+function bodyHeaderPressed(divname, odiv1, odiv2) {
+  var div = document.getElementById(divname);
+  if (div.classList.contains("expand")) {
+    unexpand(divname, odiv1, odiv2);
+  } else {
+    expand(divname, odiv1, odiv2);
+  }
+}
+
+function expand(divname, smalldiv1, smalldiv2) {
+  var expandDiv = document.getElementById(divname);
+  var smallDiv1 = document.getElementById(smalldiv1);
+  var smallDiv2 = document.getElementById(smalldiv2);
+  expandDiv.classList.add("expand");
+  smallDiv1.classList.add("hide");
+  smallDiv2.classList.add("hide");
+}
+
+function unexpand(divname, smalldiv1, smalldiv2) {
+  var expandDiv = document.getElementById(divname);
+  var smallDiv1 = document.getElementById(smalldiv1);
+  var smallDiv2 = document.getElementById(smalldiv2);
+  expandDiv.classList.remove("expand");
+  smallDiv1.classList.remove("hide");
+  smallDiv2.classList.remove("hide");
+}
